@@ -7,7 +7,7 @@
 	"name": "tesla-homepage",
 	"version": "1.0.0",
 	"description": "Tesla Page with Taiwind CSS",
-	"main": "postcss.config.js",
+	"main": "index.html",
 	"dependencies": {
 		"acorn": "^7.4.1",
 		"acorn-node": "^1.8.2",
@@ -75,6 +75,7 @@
 		"yaml": "^1.10.2"
 	},
 	"scripts": {
+		"start": "node app.js",
 		"build": "tailwind build -i tailwind/main.css -o public/tailwind.css",
 		"watch": "tailwind build -i tailwind/main.css -o public/tailwind.css -w"
 	},
