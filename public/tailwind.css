@@ -658,6 +658,12 @@ html {
   color: rgb(57 60 65 / var(--tw-text-opacity));
 }
 
+@media (min-width: 1024px){
+  .inventory{
+    margin-left: 2rem;
+  }
+}
+
 .down_svg{
   position: absolute;
   top: 93%;
@@ -682,6 +688,20 @@ html {
 
 .down_svg{
   animation: bounce 1s infinite;
+}
+
+@media (max-width: 437px) {
+  .nav_link {
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .model_name {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 1024px){
