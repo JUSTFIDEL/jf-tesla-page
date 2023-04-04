@@ -4,41 +4,67 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="images/favicon.ico" />
-		<link rel="stylesheet" href="tailwind.css" />
 		<link
 			rel="shortcut icon"
 			href="./images/favicon.ico"
 			type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="tailwind.css" />
 		<title>JF-Tesla | Homepage</title>
 	</head>
 	<body>
 		<header class="navbar">
 			<!-- Logo -->
-			<a href="#"
-				><img src="./images/tesla.svg" alt="Tesla logo" class="h-6"
-			/></a>
+			<a href="#">
+				<img
+					src="./images/tesla.svg"
+					alt="Tesla logo"
+					class="h-6"
+					data-logo />
+			</a>
 
 			<!-- Nav Links -->
-			<div class="hidden lg:block">
-				<a href="#modelS" class="nav_link">Model S</a>
-				<a href="#model3" class="nav_link">Model 3</a>
-				<a href="#modelX" class="nav_link">Model X</a>
-				<a href="#modelY" class="nav_link">Model Y</a>
-				<a href="#solarRoof" class="nav_link">Solar Roof</a>
-				<a href="#solarPanels" class="nav_link">Solar Panels</a>
-			</div>
 
-			<!-- Ext Links -->
-			<div>
-				<a href="#shop" class="nav_link invisible lg:visible">Shop</a>
-				<a href="#account" class="nav_link invisible lg:visible">Account</a>
-				<a href="#menu" class="nav_link">Menu</a>
-			</div>
+			<nav class="navbar1 lg:block invisible lg:visible" data-navbar>
+				<div class="black-blur"></div>
+				<div class="white-blur">
+					<button
+						class="nav-close-btn"
+						aria-label="toggle menu"
+						data-navx-toggler>
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+					<a href="#modelS" class="nav_link">Model S</a>
+					<a href="#model3" class="nav_link">Model 3</a>
+					<a href="#modelX" class="nav_link">Model X</a>
+					<a href="#modelY" class="nav_link">Model Y</a>
+					<a href="#solarRoof" class="nav_link">Solar Roof</a>
+					<a href="#solarPanels" class="nav_link">Solar Panels</a>
+
+					<!-- Ext Links -->
+
+					<a href="#shop" class="nav_link invisible lg:visible">Shop</a>
+					<a href="#account" class="nav_link invisible lg:visible"
+						>Account</a
+					>
+				</div>
+			</nav>
+
+			<button
+				class="nav-open-btn nav_link1"
+				aria-label="toggle menu"
+				data-nav-toggler>
+				<a href="#menu">Menu</a>
+			</button>
 		</header>
 
 		<!-- Model S Section start -->
-		<section id="modelS" class="car_section">
+		<section id="modelS" class="car_section" data-section>
 			<img
 				src="./images/ModelS.jfif"
 				alt="Model S Image"
@@ -75,7 +101,7 @@
 		<!-- Model S Section end -->
 
 		<!-- Model 3 Section start -->
-		<section id="model3" class="car_section">
+		<section id="model3" class="car_section" data-section>
 			<img
 				src="./images/Model3.jfif"
 				alt="Model 3 Image"
@@ -112,7 +138,7 @@
 		<!-- Model 3 Section end -->
 
 		<!-- Model X Section start -->
-		<section id="modelX" class="car_section">
+		<section id="modelX" class="car_section" data-section>
 			<img
 				src="./images/ModelX.jfif"
 				alt="Model X Image"
@@ -149,7 +175,7 @@
 		<!-- Model X Section end -->
 
 		<!-- Model Y Section start -->
-		<section id="modelY" class="car_section">
+		<section id="modelY" class="car_section" data-section>
 			<img
 				src="./images/ModelY.jfif"
 				alt="Model Y Image"
@@ -186,7 +212,7 @@
 		<!-- Model Y Section end -->
 
 		<!-- Solar Roof Section start -->
-		<section id="solarRoof" class="car_section">
+		<section id="solarRoof" class="car_section" data-section>
 			<img
 				src="./images/SolarRoof.jfif"
 				alt="Solar Roof Image"
@@ -223,7 +249,7 @@
 		<!-- Solar Roof Section end -->
 
 		<!-- Solar Panel Section start -->
-		<section id="solarPanels" class="car_section">
+		<section id="solarPanels" class="car_section" data-section>
 			<img
 				src="./images/SolarPanels.jfif"
 				alt="Solar Panel Image"
