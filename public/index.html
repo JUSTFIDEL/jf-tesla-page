@@ -17,7 +17,8 @@
 		<link rel="stylesheet" href="tailwind.css" />
 		<title>JF-Tesla | Homepage</title>
 	</head>
-	<body>
+
+	<body data-body>
 		<header class="navbar">
 			<!-- Logo -->
 			<a href="#">
@@ -28,15 +29,38 @@
 					data-logo />
 			</a>
 
-			<!-- Nav Links -->
-
-			<nav class="navbar1 lg:block invisible lg:visible" data-navbar>
-				<div class="black-blur"></div>
-				<div class="white-blur">
+			<nav class="navbar2 hidden" data-navbar>
+				<div class="white-blur1 hidden">
 					<button
 						class="nav-close-btn"
 						aria-label="toggle menu"
 						data-navx-toggler>
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+					<a href="#modelS" class="nav_link2">Model S</a>
+					<a href="#model3" class="nav_link2">Model 3</a>
+					<a href="#modelX" class="nav_link2">Model X</a>
+					<a href="#modelY" class="nav_link2">Model Y</a>
+					<a href="#solarRoof" class="nav_link2">Solar Roof</a>
+					<a href="#solarPanels" class="nav_link2">Solar Panels</a>
+					<a href="#shop" class="nav_link2">Shop</a>
+					<a href="#account" class="nav_link2">Account</a>
+				</div>
+			</nav>
+
+			<button
+				class="nav-open-btn nav_link1 hidden"
+				aria-label="toggle menu"
+				data-nav-toggler>
+				<a href="#menu">Menu</a>
+			</button>
+
+			<nav class="navbar1 lg:block hidden" data-navbar>
+				<div class="white-blur">
+					<button
+						class="nav-close-btn2 hidden"
+						aria-label="toggle menu"
+						data-navx-toggler2>
 						<i class="fa-solid fa-xmark"></i>
 					</button>
 					<a href="#modelS" class="nav_link">Model S</a>
@@ -56,14 +80,15 @@
 			</nav>
 
 			<button
-				class="nav-open-btn nav_link1"
+				class="nav-open-btn2 nav_link1 invisible lg:visible"
 				aria-label="toggle menu"
-				data-nav-toggler>
+				data-nav-toggler2>
 				<a href="#menu">Menu</a>
 			</button>
 		</header>
 
 		<!-- Model S Section start -->
+
 		<section id="modelS" class="car_section" data-section>
 			<img
 				src="./images/ModelS.jfif"
@@ -101,7 +126,7 @@
 		<!-- Model S Section end -->
 
 		<!-- Model 3 Section start -->
-		<section id="model3" class="car_section" data-section>
+		<section id="model3" class="car_section" data-section1>
 			<img
 				src="./images/Model3.jfif"
 				alt="Model 3 Image"
@@ -138,7 +163,7 @@
 		<!-- Model 3 Section end -->
 
 		<!-- Model X Section start -->
-		<section id="modelX" class="car_section" data-section>
+		<section id="modelX" class="car_section" data-section2>
 			<img
 				src="./images/ModelX.jfif"
 				alt="Model X Image"
@@ -175,7 +200,7 @@
 		<!-- Model X Section end -->
 
 		<!-- Model Y Section start -->
-		<section id="modelY" class="car_section" data-section>
+		<section id="modelY" class="car_section" data-section3>
 			<img
 				src="./images/ModelY.jfif"
 				alt="Model Y Image"
@@ -212,7 +237,7 @@
 		<!-- Model Y Section end -->
 
 		<!-- Solar Roof Section start -->
-		<section id="solarRoof" class="car_section" data-section>
+		<section id="solarRoof" class="car_section" data-section4>
 			<img
 				src="./images/SolarRoof.jfif"
 				alt="Solar Roof Image"
@@ -249,7 +274,7 @@
 		<!-- Solar Roof Section end -->
 
 		<!-- Solar Panel Section start -->
-		<section id="solarPanels" class="car_section" data-section>
+		<section id="solarPanels" class="car_section" data-section5>
 			<img
 				src="./images/SolarPanels.jfif"
 				alt="Solar Panel Image"

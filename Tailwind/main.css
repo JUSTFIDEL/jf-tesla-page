@@ -12,7 +12,12 @@ html {
 }
 
 .navbar {
-	@apply flex items-center justify-between w-full fixed top-0 z-10 h-[5.4rem] p-[3.5rem];
+	@apply flex items-center justify-between w-full fixed top-0 z-10 h-[5.4rem] p-[3.5rem] transition-all duration-300;
+}
+
+.navbar1,
+.navbar2 {
+	transition: all 0.3s ease;
 }
 
 .nav_link {
@@ -21,6 +26,14 @@ html {
 
 .nav_link1 {
 	@apply text-2xl font-semibold text-[#181b21] mx-[0.6rem] px-[0.6rem] py-[0.4rem] rounded-[0.8rem] bg-transparent hover:bg-[#181b21] hover:bg-opacity-10 transition-all duration-300;
+}
+
+.nav_link2 {
+	@apply text-2xl block font-semibold text-[#181b21] mx-[0.6rem] my-[0.6rem] px-[0.6rem] py-[0.4rem] hover:bg-[#181b21] hover:bg-opacity-10 transition-all duration-300;
+}
+
+.blur {
+	filter: blur(4px);
 }
 
 .car_section {
@@ -63,15 +76,92 @@ html {
 	@apply absolute top-[93%] block w-full h-20 mx-auto animate-bounce;
 }
 
-section.hero-image {
-	filter: blur(4px);
+.no-scroll {
+	overflow: hidden;
 }
 
-img.hero-image {
-	filter: blur(4px);
+@keyframes move {
+	0% {
+		transform: translateX(200px);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
-@media (max-width: 767px) {
+.navbar1 a {
+	margin-bottom: 1rem;
+}
+
+.navbar1.active {
+	max-height: 100vh;
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	padding: 70px;
+	font-weight: bold;
+	transition: all 0.3s ease-in;
+}
+
+.navbar2.active {
+	max-height: 100vh;
+	visibility: visible;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	padding: 70px;
+	font-weight: bold;
+}
+
+/* .black-blur {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	min-height: 600px;
+	background: whitesmoke;
+	filter: blur(20px);
+	opacity: 0.5;
+	z-index: 5; 
+}*/
+
+.white-blur1 {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 72%;
+	min-height: 100vh;
+	background: white;
+	padding: 7rem 3rem 0;
+	z-index: 7;
+	animation: move 0.3s ease-in;
+}
+
+.nav-close-btn {
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 60px;
+	font-size: 2rem;
+	animation: move 0.7s ease-in;
+}
+
+/* .nav-close-btn:hover {
+	background: black;
+	opacity: 0.5;
+} */
+
+i {
+	display: block;
+}
+
+@media (max-width: 768px) {
 	.nav_link1 {
 		position: absolute;
 		top: 25%;
@@ -86,10 +176,6 @@ img.hero-image {
 
 	.navbar {
 		@apply block w-full fixed top-0 z-10 h-[5.4rem] p-[2rem] transition-all duration-300;
-	}
-
-	.nav_link {
-		@apply text-2xl block font-semibold text-[#181b21] mx-[0] px-[0] py-[10] transition-all duration-300;
 	}
 
 	.navbar1 {
@@ -109,7 +195,7 @@ img.hero-image {
 		margin-bottom: 1rem;
 	}
 
-	.navbar1.active {
+	.active {
 		max-height: 310px;
 		visibility: visible;
 		position: absolute;
@@ -135,6 +221,12 @@ img.hero-image {
 	}*/
 
 	.white-blur {
+		display: none;
+		transition: all 0.2s ease-in;
+	}
+
+	.white-blur1 {
+		display: block;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -143,19 +235,22 @@ img.hero-image {
 		background: white;
 		padding: 7rem 3rem 0;
 		z-index: 7;
+		transition: all 0.2s ease-in;
 	}
 
 	.nav-close-btn {
+		display: block;
 		position: absolute;
 		top: 12px;
 		right: 31px;
+		transition: all 0.2s ease-in;
+	}
+
+	.nav-open-btn {
+		display: block;
 	}
 
 	i {
 		display: block;
-	}
-
-	.nav-close-btn {
-		font-size: 3rem;
 	}
 }

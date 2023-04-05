@@ -519,6 +519,10 @@ video {
   visibility: hidden;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -548,6 +552,14 @@ html {
   align-items: center;
   justify-content: space-between;
   padding: 3.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.navbar1,
+.navbar2 {
+  transition: all 0.3s ease;
 }
 
 .nav_link{
@@ -596,6 +608,35 @@ html {
 .nav_link1:hover{
   background-color: rgb(24 27 33 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.1;
+}
+
+.nav_link2{
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+  display: block;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(24 27 33 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.nav_link2:hover{
+  background-color: rgb(24 27 33 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+}
+
+.blur {
+  filter: blur(4px);
 }
 
 .car_section{
@@ -711,15 +752,93 @@ html {
   animation: bounce 1s infinite;
 }
 
-section.hero-image {
-  filter: blur(4px);
+.no-scroll {
+  overflow: hidden;
 }
 
-img.hero-image {
-  filter: blur(4px);
+@keyframes move {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
-@media (max-width: 767px) {
+.navbar1 a {
+  margin-bottom: 1rem;
+}
+
+.navbar1.active {
+  max-height: 100vh;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  padding: 70px;
+  font-weight: bold;
+  transition: all 0.3s ease-in;
+}
+
+.navbar2.active {
+  max-height: 100vh;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  padding: 70px;
+  font-weight: bold;
+}
+
+/* .black-blur {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	min-height: 600px;
+	background: whitesmoke;
+	filter: blur(20px);
+	opacity: 0.5;
+	z-index: 5; 
+}*/
+
+.white-blur1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 72%;
+  min-height: 100vh;
+  background: white;
+  padding: 7rem 3rem 0;
+  z-index: 7;
+  animation: move 0.3s ease-in;
+}
+
+.nav-close-btn {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  font-size: 2rem;
+  animation: move 0.7s ease-in;
+}
+
+/* .nav-close-btn:hover {
+	background: black;
+	opacity: 0.5;
+} */
+
+i {
+  display: block;
+}
+
+@media (max-width: 768px) {
   .nav_link1 {
     position: absolute;
     top: 25%;
@@ -745,24 +864,6 @@ img.hero-image {
     transition-duration: 300ms;
   }
 
-  .nav_link{
-    margin-left: 0;
-    margin-right: 0;
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10;
-    padding-bottom: 10;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    --tw-text-opacity: 1;
-    color: rgb(24 27 33 / var(--tw-text-opacity));
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-  }
-
   .navbar1 {
     display: none;
   }
@@ -781,7 +882,7 @@ img.hero-image {
     margin-bottom: 1rem;
   }
 
-  .navbar1.active {
+  .active {
     max-height: 310px;
     visibility: visible;
     position: absolute;
@@ -807,6 +908,12 @@ img.hero-image {
 	}*/
 
   .white-blur {
+    display: none;
+    transition: all 0.2s ease-in;
+  }
+
+  .white-blur1 {
+    display: block;
     position: absolute;
     top: 0;
     right: 0;
@@ -815,20 +922,23 @@ img.hero-image {
     background: white;
     padding: 7rem 3rem 0;
     z-index: 7;
+    transition: all 0.2s ease-in;
   }
 
   .nav-close-btn {
+    display: block;
     position: absolute;
     top: 12px;
     right: 31px;
+    transition: all 0.2s ease-in;
+  }
+
+  .nav-open-btn {
+    display: block;
   }
 
   i {
     display: block;
-  }
-
-  .nav-close-btn {
-    font-size: 3rem;
   }
 }
 
