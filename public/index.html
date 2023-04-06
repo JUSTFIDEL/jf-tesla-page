@@ -19,7 +19,7 @@
 	</head>
 
 	<body data-body>
-		<header class="navbar">
+		<header class="navbar" id="main-nav">
 			<!-- Logo -->
 			<a href="#">
 				<img
@@ -29,7 +29,7 @@
 					data-logo />
 			</a>
 
-			<nav class="navbar2 hidden" data-navbar>
+			<nav class="navbar1 hidden" data-navbar>
 				<div class="white-blur1 hidden">
 					<button
 						class="nav-close-btn"
@@ -55,28 +55,26 @@
 				<a href="#menu">Menu</a>
 			</button>
 
-			<nav class="navbar1 lg:block hidden" data-navbar>
-				<div class="white-blur">
-					<button
-						class="nav-close-btn2 hidden"
-						aria-label="toggle menu"
-						data-navx-toggler2>
-						<i class="fa-solid fa-xmark"></i>
-					</button>
-					<a href="#modelS" class="nav_link">Model S</a>
-					<a href="#model3" class="nav_link">Model 3</a>
-					<a href="#modelX" class="nav_link">Model X</a>
-					<a href="#modelY" class="nav_link">Model Y</a>
-					<a href="#solarRoof" class="nav_link">Solar Roof</a>
-					<a href="#solarPanels" class="nav_link">Solar Panels</a>
+			<nav class="navbar2 hidden lg:block" data-navbar2>
+				<!-- <div class="white-blur"> -->
+				<button
+					class="nav-close-btn2 hidden"
+					aria-label="toggle menu"
+					data-navx-toggler2>
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+				<a href="#modelS" class="nav_link">Model S</a>
+				<a href="#model3" class="nav_link">Model 3</a>
+				<a href="#modelX" class="nav_link">Model X</a>
+				<a href="#modelY" class="nav_link">Model Y</a>
+				<a href="#solarRoof" class="nav_link">Solar Roof</a>
+				<a href="#solarPanels" class="nav_link">Solar Panels</a>
 
-					<!-- Ext Links -->
+				<!-- Ext Links -->
 
-					<a href="#shop" class="nav_link invisible lg:visible">Shop</a>
-					<a href="#account" class="nav_link invisible lg:visible"
-						>Account</a
-					>
-				</div>
+				<a href="#shop" class="nav_link invisible lg:visible">Shop</a>
+				<a href="#account" class="nav_link invisible lg:visible">Account</a>
+				<!-- </div> -->
 			</nav>
 
 			<button

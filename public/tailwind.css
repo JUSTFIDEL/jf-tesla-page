@@ -635,10 +635,6 @@ html {
   --tw-bg-opacity: 0.1;
 }
 
-.blur {
-  filter: blur(4px);
-}
-
 .car_section{
   position: relative;
   height: 100vh;
@@ -752,10 +748,6 @@ html {
   animation: bounce 1s infinite;
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 @keyframes move {
   0% {
     transform: translateX(200px);
@@ -768,6 +760,7 @@ html {
 
 .navbar1 a {
   margin-bottom: 1rem;
+  transition: all 0.3s ease-in;
 }
 
 .navbar1.active {
@@ -784,7 +777,7 @@ html {
 }
 
 .navbar2.active {
-  max-height: 100vh;
+  min-height: 100vh;
   visibility: visible;
   position: absolute;
   top: 0;
@@ -793,6 +786,8 @@ html {
   display: block;
   padding: 70px;
   font-weight: bold;
+  background: transparent;
+  transition: all 0.3s ease-in;
 }
 
 /* .black-blur {
@@ -838,6 +833,10 @@ i {
   display: block;
 }
 
+#main-nav {
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
   .nav_link1 {
     position: absolute;
@@ -866,6 +865,7 @@ i {
 
   .navbar1 {
     display: none;
+    transition: all 0.3s ease;
   }
 
   @keyframes move {
@@ -930,7 +930,7 @@ i {
     position: absolute;
     top: 12px;
     right: 31px;
-    transition: all 0.2s ease-in;
+    transition: all 0.3s ease;
   }
 
   .nav-open-btn {

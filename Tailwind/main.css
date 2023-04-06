@@ -32,10 +32,6 @@ html {
 	@apply text-2xl block font-semibold text-[#181b21] mx-[0.6rem] my-[0.6rem] px-[0.6rem] py-[0.4rem] hover:bg-[#181b21] hover:bg-opacity-10 transition-all duration-300;
 }
 
-.blur {
-	filter: blur(4px);
-}
-
 .car_section {
 	@apply w-full h-screen relative;
 }
@@ -76,10 +72,6 @@ html {
 	@apply absolute top-[93%] block w-full h-20 mx-auto animate-bounce;
 }
 
-.no-scroll {
-	overflow: hidden;
-}
-
 @keyframes move {
 	0% {
 		transform: translateX(200px);
@@ -91,6 +83,7 @@ html {
 
 .navbar1 a {
 	margin-bottom: 1rem;
+	transition: all 0.3s ease-in;
 }
 
 .navbar1.active {
@@ -107,7 +100,7 @@ html {
 }
 
 .navbar2.active {
-	max-height: 100vh;
+	min-height: 100vh;
 	visibility: visible;
 	position: absolute;
 	top: 0;
@@ -116,6 +109,8 @@ html {
 	display: block;
 	padding: 70px;
 	font-weight: bold;
+	background: transparent;
+	transition: all 0.3s ease-in;
 }
 
 /* .black-blur {
@@ -161,6 +156,10 @@ i {
 	display: block;
 }
 
+#main-nav {
+	transition: all 0.3s ease;
+}
+
 @media (max-width: 768px) {
 	.nav_link1 {
 		position: absolute;
@@ -180,6 +179,7 @@ i {
 
 	.navbar1 {
 		display: none;
+		transition: all 0.3s ease;
 	}
 
 	@keyframes move {
@@ -243,7 +243,7 @@ i {
 		position: absolute;
 		top: 12px;
 		right: 31px;
-		transition: all 0.2s ease-in;
+		transition: all 0.3s ease;
 	}
 
 	.nav-open-btn {
